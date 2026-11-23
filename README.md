@@ -7,7 +7,7 @@ Node.js (LTS) and Git.
 
 ## Run each folder
 - **01, 02, 03:** open the root `index.html` with the IDE's live preview or a Live Server extension. No build step.
-- **04-react:** `cd react`, then `npm install`, then `npm run dev`, and open the localhost link.
+- **react:** `cd react`, then `npm install`, then `npm run dev`, and open the localhost link.
 
 ## Folder to session map
 | Folder | Sessions |
