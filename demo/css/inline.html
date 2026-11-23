@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- FILE: 02-css/inline.html | SESSION 2 | TEACHES: INLINE CSS (style written inside the tag). -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inline CSS</title>
+</head>
+<!-- INLINE CSS: the style="..." attribute styles ONE element only. -->
+<body style="font-family: system-ui, Arial, sans-serif; font-size: 18px; background: #f6f8fc; padding: 32px;">
+  <h1 style="color: #111;">Inline CSS</h1>
+  <p style="color: #555;">Same card, three ways. This is way 1 of 3. Next: internal.html.</p>
+
+  <!-- THE SCHEDULE CARD: every style is written on the tag itself. -->
+  <div style="background: #ffffff; border: 1px solid #d5dae3; border-radius: 12px; padding: 20px; max-width: 360px;">
+    <h2 style="margin: 0 0 6px; color: #0B5FFF;">Session 1</h2>
+    <p style="margin: 0 0 12px; color: #555;">Saturday | 1 hour</p>
+    <p style="margin: 0;">How the web works and tool setup.</p>
+  </div>
+
+  <!-- WHEN IS INLINE FINE? Quick one-off tests, emails. WHY IT DOES NOT SCALE: to change the blue
+       you must edit every tag by hand. Inline styles also beat every other CSS rule (highest priority).
+       TRY THIS (live): change #0B5FFF in the h2 to red and watch the card update. -->
+</body>
+</html>

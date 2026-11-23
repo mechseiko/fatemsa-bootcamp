@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+  FILE: 01-html/index.html   |   SESSION 2 (HTML)
+  WHAT IT TEACHES: every important HTML tag, in one page.
+  THIS FIRST LINE, <!DOCTYPE html>, tells the browser: "this is a modern HTML page".
+  THIS IS A COMMENT: text between the arrows is ignored by the browser. It is for humans.
+-->
+
+<!-- THIS IS THE <html> TAG: the root. Everything lives inside it. lang="en" says the page is English. -->
+<html lang="en">
+
+<!-- ===================== HEAD: information ABOUT the page (not shown on screen) ===================== -->
+<head>
+  <!-- THIS IS A <meta charset> TAG: lets the page show all characters, like accents and symbols. -->
+  <meta charset="UTF-8">
+  <!-- THIS IS A <meta viewport> TAG: makes the page fit phone screens properly. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- THIS IS A <title> TAG: the text on the browser tab. TRY THIS (live): change it and look at the tab. -->
+  <title>FATEMSA Bootcamp 2026 - Notice Board</title>
+  <!-- THIS IS A <link> TAG: connects a CSS file. We keep this page unstyled on purpose. It would look like:
+       <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<!-- ===================== BODY: everything the visitor SEES ===================== -->
+<body>
+
+  <!-- ===== SEMANTIC LAYOUT TAGS: they give meaning to areas of the page ===== -->
+  <!-- THIS IS A <header> TAG: the top area of a page or section. -->
+  <header>
+    <!-- THIS IS AN <img> TAG: shows a picture. src = where the file is, alt = text for screen readers and broken images. -->
+    <img src="../assets/logo.svg" alt="Code logo" width="80">
+
+    <!-- THIS IS AN <h1> TAG: the main heading. Use only ONE per page. TRY THIS (live): change this text. -->
+    <h1>FATEMSA Bootcamp 2026</h1>
+
+    <!-- THIS IS A <nav> TAG: a group of navigation links. -->
+    <nav>
+      <!-- THIS IS AN <a> TAG: a link. href = where it goes. -->
+      <!-- Jump link: href="#schedule" scrolls to the element with id="schedule". -->
+      <a href="#schedule">Schedule</a> |
+      <a href="#signup">Sign up</a> |
+      <!-- Internal link: goes to another page in this project. -->
+      <a href="../02-css/internal.html">See the CSS demo</a> |
+      <!-- External link: target="_blank" opens a new tab; rel="noopener" keeps it safe. -->
+      <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Docs</a> |
+      <!-- Email link: mailto: opens the mail app. -->
+      <a href="mailto:hello@example.com">Email us</a>
+    </nav>
+  </header>
+
+  <hr> <!-- THIS IS AN <hr> TAG: a horizontal line that separates content. It has no closing tag. -->
+
+  <!-- THIS IS A <main> TAG: the main content of the page. Use only one. -->
+  <main>
+
+    <!-- THIS IS A <section> TAG: a themed group of content, usually with a heading. -->
+    <section>
+      <!-- THESE ARE HEADINGS: h1 is biggest, h6 is smallest. Use them in order, like an outline. -->
+      <h2>About the class</h2>
+      <h3>Heading level 3</h3>
+      <h4>Heading level 4</h4>
+      <h5>Heading level 5</h5>
+      <h6>Heading level 6</h6>
+
+      <!-- THIS IS A <p> TAG: a paragraph of text. -->
+      <p>
+        This is a paragraph. A crash course in web and software development for beginners in Ibadan and Ife.
+        <!-- THIS IS A <br> TAG: a line break. No closing tag. -->
+        <br>
+        This text is on a new line because of the br tag.
+      </p>
+
+      <p>
+        <!-- THIS IS A <strong> TAG: important text, shown bold. -->
+        <strong>Important:</strong> bring your laptop.
+        <!-- THIS IS AN <em> TAG: emphasised text, shown italic. -->
+        Classes are <em>short and practical</em>.
+        <!-- THIS IS A <span> TAG: a small inline wrapper with no meaning of its own. Great for styling one word later. -->
+        Sessions hold on <span>Saturday</span> and <span>Sunday</span>.
+      </p>
+
+      <!-- THIS IS A <div> TAG: a generic box that groups things. id is a UNIQUE name, class is a REUSABLE label. -->
+      <div id="tip-box" class="tip">
+        <p>This paragraph is inside a div. The div has an id ("tip-box") and a class ("tip"). CSS and JavaScript use them to find this box.</p>
+      </div>
+    </section>
+
+    <!-- ===== LISTS ===== -->
+    <section>
+      <h2>Lists</h2>
+      <!-- THIS IS A <ul> TAG: an unordered list (bullets). Each item is an <li>. -->
+      <h3>What you will learn (unordered)</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <!-- THIS IS AN <ol> TAG: an ordered list (numbers). Use it when the order matters. -->
+      <h3>How to ship a site (ordered)</h3>
+      <ol>
+        <li>Build it</li>
+        <li>Push to GitHub</li>
+        <li>Deploy on Vercel</li>
+      </ol>
+    </section>
+
+    <!-- ===== TABLE ===== -->
+    <!-- The id below is what the jump link "#schedule" scrolls to. -->
+    <section id="schedule">
+      <h2>Weekend schedule</h2>
+      <!-- THIS IS A <table> TAG: data in rows and columns. Not for page layout! -->
+      <table border="1" cellpadding="6">
+        <!-- THIS IS A <caption> TAG: the title of the table. -->
+        <caption>Week 1</caption>
+        <!-- THIS IS A <thead> TAG: the header part of the table. <tr> is a row, <th> is a header cell. -->
+        <thead>
+          <tr><th>Day</th><th>Topic</th><th>Time</th></tr>
+        </thead>
+        <!-- THIS IS A <tbody> TAG: the main part of the table. <td> is a normal data cell. -->
+        <tbody>
+          <tr><td>Saturday</td><td>How the web works</td><td>1 hour</td></tr>
+          <tr><td>Sunday</td><td>HTML and CSS</td><td>1 hour</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== ARTICLE and ASIDE ===== -->
+    <!-- THIS IS AN <article> TAG: a self-contained piece, like a blog post or news card. -->
+    <article>
+      <h2>Notice: bring your laptop</h2>
+      <p>Install Chrome, Node.js and Git before Session 1.</p>
+    </article>
+    <!-- THIS IS AN <aside> TAG: side content that is related but not essential, like a tip box. -->
+    <aside>
+      <p><strong>Tip:</strong> press F12 in Chrome to see this page's code.</p>
+    </aside>
+
+    <!-- ===== FORM ===== -->
+    <section id="signup">
+      <h2>Sign-up form</h2>
+      <!-- THIS IS A <form> TAG: collects information from the visitor. -->
+      <form>
+        <!-- THIS IS A <label> TAG: names an input. "for" matches the input's id, so clicking the label focuses the input. -->
+        <label for="name">Name:</label>
+        <!-- THIS IS AN <input> TAG: the type attribute changes what it does. No closing tag. -->
+        <input type="text" id="name" placeholder="Your full name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="you@example.com"><br><br>
+
+        <label for="pw">Password:</label>
+        <input type="password" id="pw"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="10" max="99"><br><br>
+
+        <label for="date">Start date:</label>
+        <input type="date" id="date"><br><br>
+
+        <!-- Checkbox: tick on or off. -->
+        <input type="checkbox" id="laptop"> <label for="laptop">I have a laptop</label><br><br>
+
+        <!-- Radio buttons: choose ONE. They share the same name. -->
+        Level:
+        <input type="radio" name="level" id="beg" value="beginner"> <label for="beg">Beginner</label>
+        <input type="radio" name="level" id="mid" value="intermediate"> <label for="mid">Intermediate</label><br><br>
+
+        <!-- THIS IS A <select> TAG: a dropdown. Each choice is an <option>. -->
+        <label for="faculty">Faculty:</label>
+        <select id="faculty">
+          <option>Technology</option>
+          <option>Science</option>
+          <option>Law</option>
+        </select><br><br>
+
+        <!-- THIS IS A <textarea> TAG: a big box for long text. -->
+        <label for="why">Why do you want to join?</label><br>
+        <textarea id="why" rows="3" cols="40"></textarea><br><br>
+
+        <!-- THIS IS A <button> TAG: a clickable button. type="submit" sends the form. -->
+        <button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <hr>
+
+  <!-- THIS IS A <footer> TAG: the bottom area of a page or section. -->
+  <footer>
+    <p>FATEMSA Bootcamp 2026. TRY THIS (live): change this footer text and watch the preview update.</p>
+  </footer>
+</body>
+</html>

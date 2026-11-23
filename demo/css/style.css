@@ -1,0 +1,32 @@
+/* FILE: 02-css/style.css | SESSION 2 | TEACHES: external CSS, variables, flexbox, grid, media queries. */
+
+/* THE CASCADE IN PLAIN WORDS (which rule wins?):
+   1. Inline styles (style="") win over everything.
+   2. Otherwise the MORE SPECIFIC selector wins (id beats class, class beats element).
+   3. If they are equally specific, the rule written LATER wins. */
+
+/* CSS VARIABLES: define a value once, reuse it everywhere. TRY THIS (live): change --accent. */
+:root {
+  --accent: #0B5FFF;
+  --ink: #111111;
+  --grey: #555555;
+}
+
+body { font-family: system-ui, Arial, sans-serif; font-size: 18px; background: #f6f8fc; padding: 32px; color: var(--ink); }
+.muted { color: var(--grey); margin: 0 0 12px; }
+
+.card { background: #ffffff; border: 1px solid #d5dae3; border-radius: 12px; padding: 20px; width: 260px; }
+.card h2 { margin: 0 0 6px; color: var(--accent); }
+
+/* FLEXBOX: display:flex lines children up in a row. gap = space between. flex-wrap lets them drop to the next line. */
+.row { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* GRID: 4 equal columns. 1fr means "one share of the space". */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 600px; }
+.tile { background: var(--accent); color: #fff; padding: 20px; text-align: center; border-radius: 10px; font-weight: bold; }
+
+/* MEDIA QUERY: these rules only apply when the screen is 600px wide or less (phones). */
+@media (max-width: 600px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }  /* 2 columns on phones */
+  .card { width: 100%; }
+}

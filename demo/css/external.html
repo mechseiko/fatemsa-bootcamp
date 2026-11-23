@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- FILE: 02-css/external.html | SESSION 2 | TEACHES: EXTERNAL CSS (a separate style.css file). The professional way. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>External CSS</title>
+  <!-- THIS LINK connects style.css. All the styling now lives in one separate file shared by many pages. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>External CSS</h1>
+  <p class="muted">Way 3 of 3. This page has NO style code in it. Open style.css to see the rules.</p>
+
+  <!-- FLEXBOX: the cards sit in a row and wrap onto new lines. -->
+  <div class="row">
+    <div class="card"><h2>Session 1</h2><p class="muted">Saturday</p><p>How the web works.</p></div>
+    <div class="card"><h2>Session 2</h2><p class="muted">Sunday</p><p>HTML and CSS.</p></div>
+    <div class="card"><h2>Session 3</h2><p class="muted">Saturday</p><p>JavaScript basics.</p></div>
+  </div>
+
+  <!-- GRID: rows AND columns. Resize the window to see it change. -->
+  <h2>CSS Grid</h2>
+  <div class="grid">
+    <div class="tile">HTML</div><div class="tile">CSS</div><div class="tile">JS</div><div class="tile">React</div>
+  </div>
+</body>
+</html>

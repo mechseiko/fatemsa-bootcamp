@@ -1,0 +1,12 @@
+/* FILE: src/index.css | Global styles for the React demo. One accent colour, plain system font. */
+body { font-family: system-ui, Arial, sans-serif; font-size: 18px; color: #111; background: #f6f8fc; margin: 0; }
+.navbar { display: flex; gap: 20px; align-items: center; background: #fff; border-bottom: 1px solid #d5dae3; padding: 14px 32px; }
+.navbar a { color: #0B5FFF; text-decoration: none; font-weight: bold; }
+.page { max-width: 900px; margin: 0 auto; padding: 24px 32px; }
+.row { display: flex; flex-wrap: wrap; gap: 16px; }
+.card { background: #fff; border: 1px solid #d5dae3; border-radius: 12px; padding: 18px 20px; margin-bottom: 16px; width: 240px; }
+section.card { width: auto; max-width: 560px; }
+.card h2 { margin: 0 0 6px; color: #0B5FFF; }
+.muted { color: #555; margin: 0 0 10px; }
+button { font-size: 16px; padding: 8px 14px; border: 0; border-radius: 8px; background: #0B5FFF; color: #fff; cursor: pointer; margin-left: 6px; }
+input { font-size: 16px; padding: 6px; }
